@@ -5,6 +5,8 @@
 #include "student.h"
 using namespace std;
 
+#pragma once
+
 class Course{
     public:
 	    Course(string id, const string& ti, const string& te, const string& loc)

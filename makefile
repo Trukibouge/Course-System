@@ -14,4 +14,4 @@ course_system.o: list_student.h list_course.h course_system.cpp
 	g++ -c course_system.cpp
 
 course_system: course.o list_course.o student.o list_student.o course_system.o
-	g++ -o course.o list_course.o student.o list_student.o course_system.o
+	g++ -o course_system course.o list_course.o student.o list_student.o course_system.o

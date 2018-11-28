@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 
+#pragma once
+
 class Student{
     private:
         string student_id;
