@@ -36,6 +36,7 @@ class List_Student{
         List_Student(const string& filename_in);
         void display()const;
 };
+
 List_Student::List_Student(const string& filename_in){
     ifstream fic_in(filename_in);   
     string sid_in;
@@ -50,6 +51,7 @@ List_Student::List_Student(const string& filename_in){
         vector_student.push_back(P);
     }
 }
+
 void List_Student::display()const{
     int i = 0;
     for(Student S : vector_student){
