@@ -11,4 +11,6 @@ class List_Student{
     public:
         List_Student(const string& filename_in);
         void display()const;
+        string get_username(int i)const;
+        string get_password(int i)const;
 };
