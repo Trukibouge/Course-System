@@ -10,11 +10,10 @@
 using namespace std;
 
 string system_login();
-void system_running(const string username);
+void system_running(const string& user_id);
 void system_logout();
 
 string system_login(){
-    cout << "allo";
     List_Student Full_List_Student("Account.txt");
     bool user_found = false;
     string username;
@@ -43,8 +42,13 @@ string system_login(){
         return "";
 };
 
+void system_running(const string& user_id){
+
+}
+
 int main(){
     string connect_id = system_login();
+    system_running(connect_id);
     
     /* Display test
     List_Student ListS1("Account.txt");
