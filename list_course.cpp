@@ -1,3 +1,7 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
 #include "list_course.h"
 
 List_Course::List_Course(const string& filename_in){
@@ -17,4 +21,15 @@ List_Course::List_Course(const string& filename_in){
 void List_Course::display() const{
 	for (Course C : Vect_Course)
 		C.display();
+}
+
+void List_Course::add_course(Course c) {
+    Vect_Course.push_back(c);
+}
+
+void List_Course::remove_course(Course c) {
+   for(int i = 0; i < Vect_Course.size(); i++)
+   {
+       if (Vect_Course[i].get_id() == c.get_id()) {Vect_Course.erase(i);}
+   }
 }

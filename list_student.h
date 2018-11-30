@@ -7,7 +7,6 @@ using namespace std;
 
 class List_Student{
     private:
-        //int length;
         vector<Student> vector_student;
     public:
         List_Student(const string& filename_in);
