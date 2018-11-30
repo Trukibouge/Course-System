@@ -26,10 +26,3 @@ void List_Course::display() const{
 void List_Course::add_course(Course c) {
     Vect_Course.push_back(c);
 }
-
-void List_Course::remove_course(Course c) {
-   for(int i = 0; i < Vect_Course.size(); i++)
-   {
-       if (Vect_Course[i].get_id() == c.get_id()) {Vect_Course.erase(i);}
-   }
-}

@@ -31,3 +31,11 @@ string List_Student::get_username(int i)const{
 string List_Student::get_password(int i)const{
     return(vector_student[i].get_password());
 }
+
+int List_Student::get_size()const{
+    return(vector_student.size());
+}
+
+string List_Student::get_id(int i)const{
+    return vector_student[i].get_id();
+}
