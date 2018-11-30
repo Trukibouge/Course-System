@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "list_course.h"
+using namespace std;
 
 List_Course::List_Course(const string& filename_in){
     ifstream fic(filename_in);
@@ -23,13 +24,31 @@ void List_Course::display() const{
 		C.display();
 }
 
-void List_Course::add_course(Course c) {
-    Vect_Course.push_back(c);
+void List_Course::add_course(Course& c) {
+    if(get_n_courses() < 4)
+    {
+        Vect_Course.push_back(c);
+        n_courses ++;
+        cout << "Course added"<< endl;
+    }    
+    else   
+        cout << "Please remove a course before adding one" << endl;
 }
 
-void List_Course::remove_course(Course c) {
-   for(int i = 0; i < Vect_Course.size(); i++)
-   {
-       if (Vect_Course[i].get_id() == c.get_id()) {Vect_Course.erase(i);}
-   }
+void List_Course::remove_course(Course& c) {
+    if(n_courses != 0)
+    {
+        for(vector<Course>::iterator i = Vect_Course.begin(); i <Vect_Course.end(); i++)
+        {
+            if (i->get_id() == c.get_id()) 
+            {
+                Vect_Course.erase(i);
+                n_courses--;
+                cout <<"Course erased"<< endl;
+            }
+        }
+    }
+
+    else
+        cout << "No course to remove" << endl;
 }

@@ -17,6 +17,5 @@ class Planning
         void add_course();
     private:
         List_Course list_course;
-        int n_courses;
         string student_id;
-}
+};

@@ -11,7 +11,6 @@ using namespace std;
 Planning ::  Planning(int id)
 {
     student_id = id;
-    n_courses = 0;
 }
 void Planning :: display() const
 {
