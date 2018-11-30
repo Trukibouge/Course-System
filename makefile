@@ -1,17 +1,17 @@
-course.o: course.h course.cpp
+course.o: course.h
 	g++ -c course.cpp
 
-list_course.o: course.h list_course.h list_course.cpp
+list_course.o: course.h list_course.h
 	g++ -c list_course.cpp
 
-student.o: student.h student.cpp
+student.o: student.h
 	g++ -c student.cpp
 
-list_student.o: student.h list_student.h list_student.cpp
+list_student.o: student.h list_student.h
 	g++ -c list_student.cpp
 
-course_system.o: list_student.h list_course.h course_system.cpp
+course_system.o: list_student.h list_course.h
 	g++ -c course_system.cpp
 
 course_system: course.o list_course.o student.o list_student.o course_system.o
-	g++ -o course_system course.o list_course.o student.o list_student.o course_system.o
+	g++ course.o list_course.o student.o list_student.o course_system.o -o course_system
