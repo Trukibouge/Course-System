@@ -15,3 +15,6 @@ course_system.o: list_student.h list_course.h
 
 course_system: course.o list_course.o student.o list_student.o course_system.o
 	g++ course.o list_course.o student.o list_student.o course_system.o -o course_system
+
+clean: 
+	del /f *.o
