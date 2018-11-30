@@ -20,4 +20,4 @@ course_system: course.o list_course.o student.o list_student.o planning.o course
 	g++ course.o list_course.o student.o list_student.o planning.o course_system.o -o course_system
 
 clean: 
-	del /f *.o
+	del /f *.o *.exe
