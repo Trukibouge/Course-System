@@ -27,7 +27,7 @@ string system_login(){
         if(username == Full_List_Student.get_username(i)){ 
             user_found = true;           
             if(password != Full_List_Student.get_password(i)){
-                cout << "Wrong password";
+                cout << "Wrong password"<<endl;
                 return "";
             }
             else{
@@ -38,18 +38,42 @@ string system_login(){
     }
 
     if(user_found == false)
-        cout << "User not found";
+        cout << "User not found"<<endl;
         return "";
 };
 
 void system_running(const string& user_id){
+    bool running = true;
+    int in_command;
+    while(running == true){
+        cout << "1. Check my current planning" << endl << "2. Browse available courses" << endl << "3. Logout" << endl << ">>";
+        cin >> in_command;
+        if(in_command == 1){
+
+        }
+
+        else if(in_command == 2){
+        
+        }
+
+        else if(in_command == 3){
+            cout << "Logging out..." << endl;
+            running = false;
+        }
+
+        else
+            cout << "Erroneous command. Please try again" << endl;
+    }
+
 
 }
 
 int main(){
     string connect_id = system_login();
-    system_running(connect_id);
-    
+    if(connect_id != "")
+        system_running(connect_id);
+    cout << "Course system shutting down..." <<endl;
+
     /* Display test
     List_Student ListS1("Account.txt");
     ListS1.display();
