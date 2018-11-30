@@ -15,6 +15,7 @@ class Planning
         Planning(int id);
         void display() const;
         void add_course();
+        string get_student_id(){return student_id;}
     private:
         List_Course list_course;
         string student_id;
