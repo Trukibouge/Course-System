@@ -12,6 +12,7 @@ class List_Course{
 	    List_Course(const string& filename_in);
 		List_Course() {n_courses = 0;}
 	    void display() const;
+		void display_available_courses()const;
 		void add_course(Course& c);
 		void remove_course(Course& c);
 		int get_n_courses()const{return n_courses;}

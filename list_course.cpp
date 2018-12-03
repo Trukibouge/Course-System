@@ -24,6 +24,13 @@ void List_Course::display() const{
 		C.display();
 }
 
+void List_Course::display_available_courses()const{
+    for (Course C : Vect_Course){
+        if(C.get_nb_student()<20)
+            C.display();
+    }
+}
+
 void List_Course::add_course(Course& c) {
     if(get_n_courses() < 4)
     {

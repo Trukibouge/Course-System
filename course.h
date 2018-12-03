@@ -12,7 +12,8 @@ class Course{
 	    Course(string id, const string& ti, const string& te, const string& loc)
             :course_id(id),title(ti),teacher(te),location(loc), nb_student(0){};
 	    void display() const;
-		string get_id() const { return course_id;}
+		string get_id() const {return course_id;}
+		int get_nb_student()const{return nb_student;};
     private:
 	    string course_id;
 	    string title;

@@ -12,8 +12,6 @@ using namespace std;
 
 string system_login();
 void system_running(const string& user_id);
-void check_planning();
-void browse_courses();
 void system_logout();
 
 string system_login(){
@@ -46,21 +44,40 @@ string system_login(){
 };
 
 void system_running(const string& user_id){
-    
+    List_Course Full_List_Courses("Course.txt");
     bool running = true;
     int in_command;
     while(running == true){
         cout << "1. Check my current planning" << endl << "2. Browse available courses" << endl << "3. Logout" << endl << ">>";
         cin >> in_command;
-        if(in_command == 1){
+        if(in_command == 1){ //Check Planning
 
         }
 
-        else if(in_command == 2){
-        
+        else if(in_command == 2){ //Browse Courses
+            bool running_browse = true;
+            int browse_in_command;
+            cout << "Available courses:" << endl;
+            Full_List_Courses.display_available_courses();
+            while(running_browse = true){
+                cout << "1. Add course to planning" << endl << "2. Go back" << endl << ">>";
+                cin >> browse_in_command;
+
+                if (browse_in_command==1){
+                    
+                }
+
+                else if (browse_in_command==2){
+                    running_browse = false;
+                }
+
+                else{
+                    cout << "Erroneous command. Please try again" << endl;
+                }
+            }
         }
 
-        else if(in_command == 3){
+        else if(in_command == 3){ //Logout
             cout << "Logging out..." << endl;
             running = false;
         }
@@ -68,14 +85,6 @@ void system_running(const string& user_id){
         else
             cout << "Erroneous command. Please try again" << endl;
     }
-}
-
-void check_planning(const string& student_id){
-    
-}
-
-void browse_courses(){
-
 }
 
 int main(){
