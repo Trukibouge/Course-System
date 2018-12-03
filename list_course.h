@@ -14,7 +14,7 @@ class List_Course{
 	    void display() const;
 		void add_course(Course& c);
 		void remove_course(Course& c);
-		int get_n_courses() { return n_courses;}
+		int get_n_courses()const{return n_courses;}
     private:
 		int n_courses;
 	    vector<Course> Vect_Course;

@@ -3,14 +3,17 @@
 #include <string>
 #include <vector>
 
-#include "student.h"
+//#include "student.h"
 #include "list_student.h"
 #include "list_course.h"
+#include "list_planning.h"
 
 using namespace std;
 
 string system_login();
 void system_running(const string& user_id);
+void check_planning();
+void browse_courses();
 void system_logout();
 
 string system_login(){
@@ -43,6 +46,7 @@ string system_login(){
 };
 
 void system_running(const string& user_id){
+    
     bool running = true;
     int in_command;
     while(running == true){
@@ -64,7 +68,13 @@ void system_running(const string& user_id){
         else
             cout << "Erroneous command. Please try again" << endl;
     }
+}
 
+void check_planning(const string& student_id){
+    
+}
+
+void browse_courses(){
 
 }
 

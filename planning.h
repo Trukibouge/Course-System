@@ -14,7 +14,8 @@ class Planning
     public:
         Planning(int id);
         void display() const;
-        void add_course();
+        void add_course(Course& C);
+        void remove_course(Course& C);
         string get_student_id(){return student_id;}
     private:
         List_Course list_course;
