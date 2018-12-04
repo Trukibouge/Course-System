@@ -59,3 +59,15 @@ void List_Course::remove_course(Course& c) {
     else
         cout << "No course to remove" << endl;
 }
+
+Course List_Course :: get_course(string& course_to_find_id){
+    int count = 0;
+    for(vector<Course>::iterator i = Vect_Course.begin(); i <Vect_Course.end(); i++){
+        if(i->get_id() == course_to_find_id){
+            return(Vect_Course[count]);
+        }
+        else
+            count++;
+    }
+    cout << "Course not found." << endl;
+}
